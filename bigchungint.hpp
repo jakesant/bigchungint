@@ -11,7 +11,7 @@ private:
 public:
     Bigchungint();
 
-    Bigchungint(int number)
+    Bigchungint(unsigned long long number)
     {
         vec.resize(T, false);
 
