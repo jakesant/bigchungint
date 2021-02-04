@@ -6,11 +6,21 @@ class Bigchungint
 {
 private:
     bool sign;
-    std::vector<> vec;
+    std::vector<bool> vec;
 
 public:
     Bigchungint();
 
+    Bigchungint(int number)
+    {
+        vec.resize(T, false);
+
+        for(int i = T-1; number > 0; i--) //Sets values of vector
+            {
+                vec[i] = number % 2;
+                number = number/2;
+            }
+    }
 
 }
 
