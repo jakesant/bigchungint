@@ -52,6 +52,14 @@ public:
         return temp;
     }
 
+    Bigchungint operator~() //Overloads bitwise NOT ~ operator
+    {
+        for(auto bit : this->vec)
+            bit = !bit; //Inverts the value of the bit
+
+        return *this;
+    }
+
     friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint &bci);
 
 };
