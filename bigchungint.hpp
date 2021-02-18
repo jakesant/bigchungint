@@ -25,5 +25,10 @@ public:
             }
     }
 
+    Bigchungint(const Bigchungint &bci) //Copy Constructor
+    {
+        vec = bci.vec;
+    }
+
 };
 //https://stackoverflow.com/questions/4421706/what-are-the-basic-rules-and-idioms-for-operator-overloading
