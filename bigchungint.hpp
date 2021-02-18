@@ -30,5 +30,15 @@ public:
         vec = bci.vec;
     }
 
+    friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint<T> &bci);
+
 };
+
+template <int T>
+std::ostream& operator<<(std::ostream &out, const Bigchungint<T> &bci)
+{
+    for (auto bit : bci.vec)
+        out << bit;
+    return out;
+}
 //https://stackoverflow.com/questions/4421706/what-are-the-basic-rules-and-idioms-for-operator-overloading
