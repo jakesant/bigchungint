@@ -67,6 +67,11 @@ public:
         return false;
     }
 
+    int size()
+    {
+        return vec.size();
+    }
+
     friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint &bci);
 
 };
