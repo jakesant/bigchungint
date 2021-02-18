@@ -52,6 +52,28 @@ public:
         return temp;
     }
 
+    Bigchungint& operator--() //Overloads Predecrement -- operator
+    {
+        for (unsigned int i = T-1; i < this->vec.size(); --i)
+        {
+            if (this->vec[i] == 1)
+            {
+                this->vec[i] = 0;
+                break;
+            }
+            this->vec[i] = 1;
+        }
+
+        return *this;
+    }
+
+    Bigchungint operator--(const int) //Overloads Postdecrement -- operator
+    {
+        Bigchungint<T> temp = *this;
+        --*this;
+        return temp;
+    }
+
     Bigchungint operator~() //Overloads bitwise NOT ~ operator
     {
         for(auto bit : this->vec)
