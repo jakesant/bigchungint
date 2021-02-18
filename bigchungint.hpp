@@ -60,6 +60,13 @@ public:
         return *this;
     }
 
+    bool operator==(const Bigchungint myu) //Overloads equality == operator
+    {
+        if (this->vec == myu.vec)
+            return true;
+        return false;
+    }
+
     friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint &bci);
 
 };
