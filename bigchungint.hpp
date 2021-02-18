@@ -11,7 +11,7 @@ private:
 public:
     Bigchungint() //Empty constructor
     {
-        vec = vector<bool>(T); //Sets the vector bool to be of size T bits
+        vec = std::vector<bool>(T); //Sets the vector bool to be of size T bits
     }
 
     Bigchungint(unsigned long long number)
