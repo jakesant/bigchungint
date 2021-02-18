@@ -30,7 +30,7 @@ public:
         vec = bci.vec;
     }
 
-    friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint<T> &bci);
+    friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint &bci);
 
 };
 
