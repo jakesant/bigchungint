@@ -9,7 +9,10 @@ private:
     std::vector<bool> vec;
 
 public:
-    Bigchungint();
+    Bigchungint() //Empty constructor
+    {
+        vec = vector<bool>(T); //Sets the vector bool to be of size T bits
+    }
 
     Bigchungint(unsigned long long number)
     {
@@ -22,6 +25,5 @@ public:
             }
     }
 
-}
-
+};
 //https://stackoverflow.com/questions/4421706/what-are-the-basic-rules-and-idioms-for-operator-overloading
