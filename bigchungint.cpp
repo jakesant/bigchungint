@@ -9,4 +9,10 @@ int main()
     num++;
     
     std::cout << "Number is now " << num << '\n';
+
+    std::cout << "Number size is " << num.size() << '\n';
+
+    int conversion = int (num);
+
+    std::cout << "Conversion is " << conversion << '\n';
 }

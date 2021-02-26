@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ranges>
 
 template <int T>
 class Bigchungint
@@ -95,6 +96,20 @@ public:
     }
 
     friend std::ostream& operator<< <T>(std::ostream &out, const Bigchungint &bci);
+
+    operator int () const
+    {
+        int output = 0;
+        int rep = 1;
+
+        for(auto bit : this->vec | std::views::reverse)
+        {
+            if(bit)
+                output += rep;
+            rep *= 2;
+        }
+        return output;
+    }
 
 };
 
