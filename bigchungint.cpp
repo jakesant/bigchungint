@@ -13,6 +13,10 @@ int main()
     std::cout << "Number size is " << num.size() << '\n';
 
     int conversion = int (num);
+    double doub = double (num);
+    float flo = float (num);
 
-    std::cout << "Conversion is " << conversion << '\n';
+    std::cout << "Int conversion is " << conversion << '\n';
+    std::cout << "Double conversion is " << doub << '\n';
+    std::cout << "Float conversion is " << flo << '\n';
 }

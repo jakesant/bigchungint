@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <ranges>
+#include <string>
 
 template <int T>
 class Bigchungint
@@ -100,6 +101,34 @@ public:
     operator int () const
     {
         int output = 0;
+        int rep = 1;
+
+        for(auto bit : this->vec | std::views::reverse)
+        {
+            if(bit)
+                output += rep;
+            rep *= 2;
+        }
+        return output;
+    }
+
+    operator double () const
+    {
+        double output = 0.0;
+        int rep = 1;
+
+        for(auto bit : this->vec | std::views::reverse)
+        {
+            if(bit)
+                output += rep;
+            rep *= 2;
+        }
+        return output;
+    }
+
+    operator float () const
+    {
+        float output = 0.0;
         int rep = 1;
 
         for(auto bit : this->vec | std::views::reverse)
